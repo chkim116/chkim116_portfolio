@@ -1,5 +1,5 @@
-import AppLayout from 'components/layouts/AppLayout';
-import Portfolio from 'components/Portfolio';
+import AppLayout from './components/layouts/AppLayout';
+import Portfolio from './components/Portfolio';
 
 const App = () => {
     return (
