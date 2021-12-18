@@ -1,0 +1,8 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chkim116/chkim116_portfolio.git",
+  "author": "김창회 <dudnqnfqlc@naver.com>",
+  "license": "MIT"
+}
