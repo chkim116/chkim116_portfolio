@@ -1,3 +1,9 @@
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
+import './index.css';
 
-ReactDOM.render(<div>Test</div>, document.getElementById("root"));
+ReactDOM.render(
+    <div className="bg-slate-200">
+        <p className="p-4">Test</p>
+    </div>,
+    document.getElementById('root'),
+);
