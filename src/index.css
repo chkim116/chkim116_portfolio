@@ -5,13 +5,17 @@
 @layer base {
     h2 {
         @apply text-rose-500;
-        @apply text-4xl;
+        @apply lg:text-4xl md:text-3xl text-2xl;
         @apply font-light;
     }
 
     h3 {
-        @apply text-3xl;
+        @apply lg:text-3xl md:text-2xl text-xl;
         @apply font-light;
+    }
+
+    p {
+        @apply lg:text-lg md:text-base text-sm;
     }
 }
 

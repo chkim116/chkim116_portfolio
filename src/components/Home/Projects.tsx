@@ -30,7 +30,7 @@ const Projects = () => {
     ];
 
     return (
-        <article id="projects" className="w-full p-20 flex flex-col">
+        <article id="projects" className="w-full lg:p-28 md:p-20 sm:p-10 p-8 ms:p-20 flex flex-col">
             <div className="mb-10 mx-auto">
                 <h2 className="text-right">Projects</h2>
             </div>
