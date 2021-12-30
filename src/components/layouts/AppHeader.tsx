@@ -14,7 +14,7 @@ const AppHeader = () => {
     }, []);
 
     return (
-        <header className="w-full mx-auto h-14 flex items-center relative">
+        <header className="w-full mx-auto flex items-center relative">
             <button
                 className="cursor-pointer fixed max-w-fit top-7 left-8 z-10"
                 onClick={handleOpenNav}

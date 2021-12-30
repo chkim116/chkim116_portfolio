@@ -1,10 +1,10 @@
 import AppLayout from './components/layouts/AppLayout';
-import Portfolio from './components/Portfolio';
+import Home from './components/Home';
 
 const App = () => {
     return (
         <AppLayout>
-            <Portfolio />
+            <Home />
         </AppLayout>
     );
 };

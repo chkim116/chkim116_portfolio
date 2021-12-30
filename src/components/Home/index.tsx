@@ -1,9 +1,9 @@
-const Portfolio = () => {
+import Intro from './Intro';
+
+const Home = () => {
     return (
         <section>
-            <article>
-                <div>intro</div>
-            </article>
+            <Intro />
             <article>
                 <h1>about</h1>
             </article>
@@ -20,4 +20,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default Home;
