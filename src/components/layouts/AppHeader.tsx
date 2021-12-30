@@ -1,15 +1,19 @@
 import { useCallback, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { animated, useSpring } from 'react-spring';
 
 const AppHeader = () => {
-    const [openNav, setOpenNav] = useState<'flex' | 'hidden'>('flex');
+    const [openNav, setOpenNav] = useState(false);
+    const navOpenAnimation = useSpring({
+        translateX: openNav ? 0 : -320,
+    });
 
     const handleOpenNav = useCallback(() => {
-        setOpenNav('flex');
+        setOpenNav(true);
     }, []);
 
     const handleCloseNav = useCallback(() => {
-        setOpenNav('hidden');
+        setOpenNav(false);
     }, []);
 
     return (
@@ -17,8 +21,9 @@ const AppHeader = () => {
             <button className="cursor-pointer" onClick={handleOpenNav}>
                 <AiOutlineMenu className="text-2xl" />
             </button>
-            <nav
-                className={`w-80 h-full px-8 py-8 flex-col ${openNav} fixed top-0 left-0 bg-gray-100`}
+            <animated.nav
+                style={navOpenAnimation}
+                className={`w-80 h-full px-8 py-8 flex-col flex fixed top-0 left-0 bg-gray-100`}
             >
                 <button className="max-w-fit mb-8" onClick={handleCloseNav}>
                     <AiOutlineClose className="text-3xl" />
@@ -37,7 +42,7 @@ const AppHeader = () => {
                         Contact
                     </li>
                 </ul>
-            </nav>
+            </animated.nav>
         </header>
     );
 };
