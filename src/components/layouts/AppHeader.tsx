@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+import { HiMenu } from 'react-icons/hi';
 import { animated, useSpring } from 'react-spring';
 
 const AppHeader = () => {
@@ -9,26 +10,26 @@ const AppHeader = () => {
     });
 
     const handleOpenNav = useCallback(() => {
-        setOpenNav(true);
-    }, []);
-
-    const handleCloseNav = useCallback(() => {
-        setOpenNav(false);
+        setOpenNav((prev) => !prev);
     }, []);
 
     return (
         <header className="w-full mx-auto h-14 flex items-center relative">
-            <button className="cursor-pointer" onClick={handleOpenNav}>
-                <AiOutlineMenu className="text-2xl" />
+            <button
+                className="cursor-pointer fixed max-w-fit top-7 left-8 z-10"
+                onClick={handleOpenNav}
+            >
+                {openNav ? (
+                    <AiOutlineClose className="text-3xl" />
+                ) : (
+                    <HiMenu className="text-3xl text-red-500" />
+                )}
             </button>
             <animated.nav
                 style={navOpenAnimation}
                 className={`w-80 h-full px-8 py-8 flex-col flex fixed top-0 left-0 bg-gray-100`}
             >
-                <button className="max-w-fit mb-8" onClick={handleCloseNav}>
-                    <AiOutlineClose className="text-3xl" />
-                </button>
-                <ul className="w-full flex flex-col">
+                <ul className="w-full flex flex-col pt-10">
                     <li className="mt-8 ml-4 ph-2 text-2xl font-thin cursor-pointer max-w-fit hover:text-orange-300">
                         <a href="#2">About</a>
                     </li>
