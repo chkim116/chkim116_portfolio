@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenu } from 'react-icons/hi';
 import { animated, useSpring } from 'react-spring';
+import ScrollTo from 'react-scroll-into-view';
 
 const AppHeader = () => {
     const [openNav, setOpenNav] = useState(false);
@@ -31,16 +32,39 @@ const AppHeader = () => {
             >
                 <ul className="w-full flex flex-col pt-10">
                     <li className="mt-8 ml-4 ph-2 text-2xl font-thin cursor-pointer max-w-fit hover:text-orange-300">
-                        <a href="#2">About</a>
+                        <ScrollTo selector="#aboutme">
+                            <button className="font-thin" type="button" onClick={handleOpenNav}>
+                                About Me
+                            </button>
+                        </ScrollTo>
                     </li>
                     <li className="mt-8 ml-4 ph-2 text-2xl font-thin cursor-pointer max-w-fit hover:text-orange-300">
-                        Skills
+                        <ScrollTo selector="#skills">
+                            <button className="font-thin" type="button" onClick={handleOpenNav}>
+                                Skills
+                            </button>
+                        </ScrollTo>
                     </li>
                     <li className="mt-8 ml-4 ph-2 text-2xl font-thin cursor-pointer max-w-fit hover:text-orange-300">
-                        Projects
+                        <ScrollTo selector="#work">
+                            <button className="font-thin" type="button" onClick={handleOpenNav}>
+                                Work
+                            </button>
+                        </ScrollTo>
+                    </li>
+                    <li className="mt-8 ml-4 ph-2 text-2xl cursor-pointer max-w-fit hover:text-orange-300">
+                        <ScrollTo selector="#projects">
+                            <button className="font-thin" type="button" onClick={handleOpenNav}>
+                                Projects
+                            </button>
+                        </ScrollTo>
                     </li>
                     <li className="mt-8 ml-4 ph-2 text-2xl font-thin cursor-pointer max-w-fit hover:text-orange-300">
-                        Contact
+                        <ScrollTo selector="#contact">
+                            <button className="font-thin" type="button" onClick={handleOpenNav}>
+                                Contact
+                            </button>
+                        </ScrollTo>
                     </li>
                 </ul>
             </animated.nav>

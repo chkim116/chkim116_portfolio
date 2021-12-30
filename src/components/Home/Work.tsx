@@ -22,8 +22,11 @@ const Work = () => {
     ];
 
     return (
-        <article className="w-full flex flex-col justify-center max-w-screen-md mx-auto lg:p-28 md:p-20 sm:p-10 p-8">
-            <h2 className="text-center">WORK</h2>
+        <article
+            id="work"
+            className="w-full flex flex-col justify-center max-w-screen-md mx-auto lg:p-28 md:p-20 sm:p-10 p-8"
+        >
+            <h2 className="text-center">Work</h2>
             {experience.reverse().map((job) => (
                 <div key={job.id} className="mt-8">
                     <div className="flex mb-2">

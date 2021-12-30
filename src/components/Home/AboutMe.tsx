@@ -1,6 +1,6 @@
 const AboutMe = () => {
     return (
-        <article className="w-full p-28 items-center">
+        <article id="aboutme" className="w-full p-28 items-center">
             <div className="grid grid-cols-3">
                 <div className="col-span-2 mr-12">
                     <h2 className="mb-12">About Me</h2>

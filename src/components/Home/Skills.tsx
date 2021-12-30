@@ -12,8 +12,8 @@ import {
 
 const Skills = () => {
     return (
-        <article className="w-full p-28">
-            <h2 className="text-center mb-10">My Stack</h2>
+        <article id="skills" className="w-full p-28">
+            <h2 className="text-center mb-10">Skills</h2>
             <div className="grid grid-cols-3 text-2xl font-light">
                 <div className="flex justify-center">
                     <ul className="leading-loose">
