@@ -1,12 +1,11 @@
+import AboutMe from './AboutMe';
 import Intro from './Intro';
 
 const Home = () => {
     return (
         <section>
             <Intro />
-            <article>
-                <h1>about</h1>
-            </article>
+            <AboutMe />
             <article>
                 <h1>skills/tool</h1>
             </article>
