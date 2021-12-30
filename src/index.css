@@ -2,6 +2,19 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base {
+    h2 {
+        @apply text-rose-500;
+        @apply text-4xl;
+        @apply font-light;
+    }
+
+    h3 {
+        @apply text-3xl;
+        @apply font-light;
+    }
+}
+
 html,
 body {
     padding: 0;

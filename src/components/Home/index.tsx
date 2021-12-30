@@ -1,14 +1,13 @@
 import AboutMe from './AboutMe';
 import Intro from './Intro';
+import Skills from './Skills';
 
 const Home = () => {
     return (
         <section>
             <Intro />
             <AboutMe />
-            <article>
-                <h1>skills/tool</h1>
-            </article>
+            <Skills />
             <article>
                 <h1>projects</h1>
             </article>
