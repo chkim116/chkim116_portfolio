@@ -1,4 +1,5 @@
 import AboutMe from './AboutMe';
+import Contact from './Contact';
 import Intro from './Intro';
 import Projects from './Projects';
 import Skills from './Skills';
@@ -10,9 +11,7 @@ const Home = () => {
             <AboutMe />
             <Skills />
             <Projects />
-            <article>
-                <h1>contact</h1>
-            </article>
+            <Contact />
         </section>
     );
 };
