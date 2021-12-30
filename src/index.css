@@ -3,30 +3,37 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+    html,
+    body {
+        @apply subpixel-antialiased;
+        @apply antialiased;
+        @apply tracking-tight;
+        @apply p-0;
+        @apply m-0;
+    }
+
+    ul,
+    li {
+        @apply p-0;
+        @apply m-0;
+    }
+
+    h1,
+    h2 {
+        @apply font-serif;
+    }
+
     h2 {
         @apply text-rose-500;
         @apply lg:text-4xl md:text-3xl text-2xl;
-        @apply font-light;
     }
 
     h3 {
         @apply lg:text-3xl md:text-2xl text-xl;
-        @apply font-light;
     }
 
     p {
         @apply lg:text-lg md:text-base text-sm;
+        @apply font-sans;
     }
-}
-
-html,
-body {
-    padding: 0;
-    margin: 0;
-}
-
-ul,
-li {
-    padding: 0;
-    margin: 0;
 }
