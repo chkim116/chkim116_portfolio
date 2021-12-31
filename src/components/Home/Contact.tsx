@@ -21,7 +21,12 @@ const Contact = () => {
                         'Content-Type': 'application/json;charset=utf-8',
                     },
                     body: JSON.stringify(form),
-                }).catch((err) => console.error(err));
+                })
+                    .then(() => alert('전송되었습니다.'))
+                    .catch((err) => {
+                        console.error(err);
+                        alert('전송 오류입니다. 다시 시도해 주세요.');
+                    });
             } else {
                 alert('모두 입력해 주세요.');
             }
