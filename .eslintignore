@@ -1,0 +1,7 @@
+@types/
+build/
+public/
+
+# tailiwind
+postcss.config.js
+tailwind.config.js
