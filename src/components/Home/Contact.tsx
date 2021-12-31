@@ -1,5 +1,7 @@
 import { useCallback, useState } from 'react';
 
+const { REACT_APP_DEV_URL } = process.env;
+
 const Contact = () => {
     const [form, setForm] = useState({
         name: '',
@@ -10,8 +12,15 @@ const Contact = () => {
     const handleFormSubmit = useCallback(
         (e) => {
             e.preventDefault();
+            // TODO: 완료하기
             if (form['name'] && form['email'] && form['message']) {
-                console.log(form);
+                fetch(`${REACT_APP_DEV_URL}/mail` || '', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8',
+                    },
+                    body: JSON.stringify(form),
+                }).catch((err) => console.error(err));
             } else {
                 alert('모두 입력해 주세요.');
             }
