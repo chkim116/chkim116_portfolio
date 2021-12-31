@@ -1,13 +1,15 @@
-import { Configuration } from 'webpack';
+import { Configuration, EnvironmentPlugin } from 'webpack';
 import 'webpack-dev-server';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import dotenv from 'dotenv';
 import path from 'path';
 dotenv.config();
 
 type NODE_ENV = 'production' | 'development';
 
+const { REACT_APP_DEV_URL } = process.env;
 const mode = (process.env.NODE_ENV || 'development') as NODE_ENV;
 
 const config: Configuration = {
@@ -61,15 +63,26 @@ const config: Configuration = {
             publicPath: '/',
         },
         open: true,
-        port: 5500,
+        port: 3000,
         historyApiFallback: true,
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(process.cwd(), 'public/robots.txt'),
+                    to: path.resolve(process.cwd(), 'build'),
+                },
+            ],
+        }),
         new HTMLWebpackPlugin({
             template: path.resolve(process.cwd(), 'public/index.html'),
         }),
         new MiniCssExtractPlugin({
             filename: 'styles.css',
+        }),
+        new EnvironmentPlugin({
+            REACT_APP_DEV_URL,
         }),
     ],
     resolve: {
@@ -78,7 +91,7 @@ const config: Configuration = {
     output: {
         filename: 'client.js',
         path: path.resolve(process.cwd(), 'build'),
-        publicPath: '/web/',
+        publicPath: '/',
     },
 };
 
