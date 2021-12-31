@@ -5,8 +5,9 @@
         "strict": true,
         "esModuleInterop": true,
         "jsx": "react-jsx",
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "typeRoots": ["./node_modules/@types", "./@types"]
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "include": ["src/**/*.ts", "src/**/*.tsx", "./@types/index.d.ts"],
     "exclude": ["node_modules"]
 }

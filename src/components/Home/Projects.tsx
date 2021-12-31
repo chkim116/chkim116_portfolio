@@ -1,11 +1,13 @@
 import { SiGithub } from 'react-icons/si';
 import { AiOutlineHome } from 'react-icons/ai';
+import thumb from '../../assets';
 
 const Projects = () => {
     const portfolio = [
         {
             id: 1,
             title: 'Dev Blog',
+            thumb: thumb.blog,
             desc: '개인 개발 블로그\n',
             stack: 'Next.js, Express, Redux&Saga, MongoDB, CircleCI, AWS',
             link: 'https://kormelon.com/',
@@ -14,19 +16,21 @@ const Projects = () => {
         {
             id: 2,
             title: 'Early Canvas Editor',
+            thumb: thumb.canvas,
             desc: '얼리21 커스텀 캔버스 에디터\n 현재 깃허브는 단일 에디터 기능만 발췌된 레포지토리입니다.',
             stack: 'Next.js, Nest.js, MySQL, GithubAction, AWS',
             link: 'https://early21.com/tool',
-            git: 'https://github.com/chkim116/kormelon-front',
+            git: 'https://github.com/chkim116/samplejs/tree/master/react-canvas-editor',
         },
-        {
-            id: 3,
-            title: 'Portfolio',
-            desc: '김창회 포트폴리오',
-            stack: 'React, Webpack, TailwindCSS',
-            link: '',
-            git: '',
-        },
+        // {
+        //     id: 3,
+        //     thumb: '',
+        //     title: 'Portfolio',
+        //     desc: '김창회 포트폴리오',
+        //     stack: 'React, Webpack, TailwindCSS',
+        //     link: '',
+        //     git: '',
+        // },
     ];
 
     return (
@@ -45,7 +49,7 @@ const Projects = () => {
                                 <div className="md:mr-4 max-w-sm mx-auto">
                                     <img
                                         className="w-full h-full object-cover"
-                                        src="https://via.placeholder.com/500"
+                                        src={project.thumb || 'https://via.placeholder.com/500'}
                                     />
                                 </div>
 

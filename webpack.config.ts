@@ -55,6 +55,17 @@ const config: Configuration = {
                 include: path.resolve(process.cwd(), 'src'),
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
             },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                include: path.resolve(process.cwd(), 'src'),
+                loader: 'url-loader',
+                options: {
+                    name: '[hash].[ext]',
+                    publicPath: '/',
+                    limit: 10_000,
+                    esModule: false,
+                },
+            },
         ],
     },
     devServer: {
