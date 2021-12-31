@@ -1,8 +1,9 @@
 import { useCallback, useState } from 'react';
 
-const { REACT_APP_DEV_URL } = process.env;
+const { REACT_APP_DEV_URL, REACT_APP_PROD_URL, NODE_ENV } = process.env;
 
 const Contact = () => {
+    const url = NODE_ENV === 'production' ? REACT_APP_PROD_URL : REACT_APP_DEV_URL;
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -12,9 +13,8 @@ const Contact = () => {
     const handleFormSubmit = useCallback(
         (e) => {
             e.preventDefault();
-            // TODO: 완료하기
             if (form['name'] && form['email'] && form['message']) {
-                fetch(`${REACT_APP_DEV_URL}/mail` || '', {
+                fetch(`${url}/mail` || '', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json;charset=utf-8',

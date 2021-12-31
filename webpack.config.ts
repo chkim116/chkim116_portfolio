@@ -1,4 +1,4 @@
-import { Configuration, EnvironmentPlugin } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 import 'webpack-dev-server';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
@@ -9,8 +9,8 @@ dotenv.config();
 
 type NODE_ENV = 'production' | 'development';
 
-const { REACT_APP_DEV_URL } = process.env;
-const mode = (process.env.NODE_ENV || 'development') as NODE_ENV;
+const { NODE_ENV } = process.env;
+const mode = (NODE_ENV || 'development') as NODE_ENV;
 
 const config: Configuration = {
     name: 'client',
@@ -92,8 +92,8 @@ const config: Configuration = {
         new MiniCssExtractPlugin({
             filename: 'styles.css',
         }),
-        new EnvironmentPlugin({
-            REACT_APP_DEV_URL,
+        new DefinePlugin({
+            'process.env': JSON.stringify(process.env),
         }),
     ],
     resolve: {
