@@ -25,6 +25,7 @@ const config: Configuration = {
     plugins: [...getPlugins(mode)],
     resolve: {
         extensions: ['.js', '.ts', '.tsx'],
+        modules: [PATHS.app, 'node_modules'],
     },
     output: {
         filename: '[name].[chunkhash].js',
