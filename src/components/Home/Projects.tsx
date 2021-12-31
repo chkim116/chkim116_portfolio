@@ -17,7 +17,7 @@ const Projects = () => {
             id: 2,
             title: 'Early Canvas Editor',
             thumb: thumb.canvas,
-            desc: '얼리21 커스텀 캔버스 에디터\n 현재 깃허브는 단일 에디터 기능만 발췌된 레포지토리입니다.',
+            desc: '얼리21 커스텀 캔버스 에디터\n보안상 데모 레포지토리 링크로 대체합니다.',
             stack: 'Next.js, Nest.js, MySQL, GithubAction, AWS',
             link: 'https://early21.com/tool',
             git: 'https://github.com/chkim116/samplejs/tree/master/react-canvas-editor',
@@ -73,14 +73,20 @@ const Projects = () => {
 
                                     {/* desc-link */}
                                     <div className="flex justify-end">
-                                        <button className="mt-4 text-sm hover:opacity-60 rounded-md">
-                                            <a href={project.link}>
-                                                <AiOutlineHome className="text-2xl text-red-400" />
-                                            </a>
-                                        </button>
-                                        <button className="mt-4 ml-4 hover:opacity-60">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            className="mt-4 text-sm hover:opacity-60 rounded-md"
+                                        >
+                                            <AiOutlineHome className="text-2xl text-red-400" />
+                                        </a>
+                                        <a
+                                            href={project.git}
+                                            target="_blank"
+                                            className="mt-4 ml-4 hover:opacity-60"
+                                        >
                                             <SiGithub className="text-2xl" />
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
