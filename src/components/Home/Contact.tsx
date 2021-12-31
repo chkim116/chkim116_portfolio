@@ -1,9 +1,10 @@
+import { DEV_URL, PROD_URL } from 'constants/var';
 import { useCallback, useState } from 'react';
 
-const { REACT_APP_DEV_URL, REACT_APP_PROD_URL, NODE_ENV } = process.env;
+const { NODE_ENV } = process.env;
 
 const Contact = () => {
-    const url = NODE_ENV === 'production' ? REACT_APP_PROD_URL : REACT_APP_DEV_URL;
+    const url = NODE_ENV === 'production' ? PROD_URL : DEV_URL;
     const [form, setForm] = useState({
         name: '',
         email: '',
