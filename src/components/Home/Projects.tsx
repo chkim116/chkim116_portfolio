@@ -77,6 +77,7 @@ const Projects = () => {
                                             href={project.link}
                                             target="_blank"
                                             className="mt-4 text-sm hover:opacity-60 rounded-md"
+                                            rel="noreferrer"
                                         >
                                             <AiOutlineHome className="text-2xl text-red-400" />
                                         </a>
@@ -84,6 +85,7 @@ const Projects = () => {
                                             href={project.git}
                                             target="_blank"
                                             className="mt-4 ml-4 hover:opacity-60"
+                                            rel="noreferrer"
                                         >
                                             <SiGithub className="text-2xl" />
                                         </a>

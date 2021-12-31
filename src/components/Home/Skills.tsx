@@ -60,10 +60,13 @@ const Skills = () => {
         <article id="skills" className="w-full p-28">
             <h2 className="text-center mb-10">Skills</h2>
             <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-xl">
-                {stacks.map((stack) => (
-                    <ul className="w-full flex flex-col items-center">
+                {stacks.map((stack, i) => (
+                    <ul key={i} className="w-full flex flex-col items-center">
                         {stack.map((s) => (
-                            <li className="w-40 flex items-center text-xl mt-3 font-light">
+                            <li
+                                key={s.name}
+                                className="w-40 flex items-center text-xl mt-3 font-light"
+                            >
                                 {s.icon}
                                 <span className="ml-2">{s.name}</span>
                             </li>

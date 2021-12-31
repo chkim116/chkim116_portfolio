@@ -44,7 +44,9 @@ const Work = () => {
 
                     <div className="p-4 leading-8">
                         {job.task.map((desc) => (
-                            <p className="whitespace-pre-wrap">- {desc}</p>
+                            <p key={desc} className="whitespace-pre-wrap">
+                                - {desc}
+                            </p>
                         ))}
                     </div>
                 </div>

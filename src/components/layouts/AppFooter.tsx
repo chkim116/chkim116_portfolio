@@ -4,10 +4,15 @@ const AppFooter = () => {
     return (
         <footer className="w-full lg:pl-28 md:pl-20 sm:pl-10 pl-8 pb-20 bg-gray-700 flex flex-col">
             <div className="flex">
-                <a href="https://github.com/chkim116" target="_blank" className="mr-4">
+                <a
+                    href="https://github.com/chkim116"
+                    target="_blank"
+                    className="mr-4"
+                    rel="noreferrer"
+                >
                     <SiGithub className="text-3xl text-white" />
                 </a>
-                <a href="https://kormelon.com" target="_blank">
+                <a href="https://kormelon.com" target="_blank" rel="noreferrer">
                     <SiBlogger className="text-3xl text-white" />
                 </a>
             </div>
@@ -18,6 +23,7 @@ const AppFooter = () => {
                         className="text-rose-700 font-semibold"
                         href="https://neva-portfolio-vue.netlify.app/"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         aabid sofi
                     </a>

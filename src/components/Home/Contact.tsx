@@ -25,7 +25,7 @@ const Contact = () => {
                 alert('모두 입력해 주세요.');
             }
         },
-        [form],
+        [form, url],
     );
 
     const handleFormChange = useCallback((e) => {
@@ -41,7 +41,7 @@ const Contact = () => {
         >
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="mb-8 md:mb-0 md:mr-4">
-                    <h2 className="mb-6">Let's Connect</h2>
+                    <h2 className="mb-6">Let&apos;s Connect</h2>
                 </div>
 
                 {/* form */}
