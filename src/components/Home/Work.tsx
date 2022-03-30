@@ -13,10 +13,30 @@ const Work = () => {
         },
         {
             id: 2,
+            logo: 'https://blog.kakaocdn.net/dn/sGJRK/btqDDvpx1d8/f4kzzCaHdaRLmwfkhVUKy1/img.jpg',
+            name: '얼리21',
+            position: 'FullStack',
+            period: '2021.06~12',
+            task: ['커스텀 캔버스 에디터 기획 및 제작', '스마트스토어 및 쿠팡 스토어 운영'],
+        },
+        {
+            id: 3,
             logo: 'https://lh3.googleusercontent.com/-cBq5dX2hwQ4/AAAAAAAAAAI/AAAAAAAAAAA/uPlJ6vexcnQ/s44-p-k-no-ns-nd/photo.jpg',
             name: '꿈많은 청년들',
             position: 'FrontEnd',
-            period: '2022.01~',
+            period: '2022.01~04',
+            task: [
+                '사내 관리 시스템 페이지 작업',
+                '챗봇 빌더 유지보수 작업',
+                'PR 리뷰 문화 및 코드 컨벤션 도입',
+            ],
+        },
+        {
+            id: 4,
+            logo: 'https://play-lh.googleusercontent.com/nvH1MzU9vTQ9lj1I6FsZS_DGbl4yIv2kTiRLMdYeezp57ZJAj6FrPa7gfSxkW0n_qOuT',
+            name: '룩핀',
+            position: 'FrontEnd',
+            period: '2022.04~',
             task: [],
         },
     ];

@@ -9,7 +9,7 @@ const Projects = () => {
             title: 'Dev Blog',
             thumb: thumb.blog,
             desc: '개인 개발 블로그\n',
-            stack: 'Next.js, Express, Redux&Saga, MongoDB, CircleCI, AWS',
+            stack: 'Next.js, Redux, Express, TypeORM, MySql, CircleCI, AWS',
             link: 'https://kormelon.com/',
             git: 'https://github.com/chkim116/kormelon-front',
         },
@@ -17,10 +17,10 @@ const Projects = () => {
             id: 2,
             title: 'Early Canvas Editor',
             thumb: thumb.canvas,
-            desc: '얼리21 커스텀 캔버스 에디터\n보안상 데모 레포지토리 링크로 대체합니다.',
+            desc: '얼리21 커스텀 캔버스 에디터',
             stack: 'Next.js, Nest.js, MySQL, GithubAction, AWS',
             link: 'https://early21.com/tool',
-            git: 'https://github.com/chkim116/samplejs/tree/master/react-canvas-editor',
+            git: null,
         },
         // {
         //     id: 3,
@@ -81,14 +81,16 @@ const Projects = () => {
                                         >
                                             <AiOutlineHome className="text-2xl text-red-400" />
                                         </a>
-                                        <a
-                                            href={project.git}
-                                            target="_blank"
-                                            className="mt-4 ml-4 hover:opacity-60"
-                                            rel="noreferrer"
-                                        >
-                                            <SiGithub className="text-2xl" />
-                                        </a>
+                                        {project.git && (
+                                            <a
+                                                href={project.git}
+                                                target="_blank"
+                                                className="mt-4 ml-4 hover:opacity-60"
+                                                rel="noreferrer"
+                                            >
+                                                <SiGithub className="text-2xl" />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
